@@ -25,7 +25,7 @@
 
 
   <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/eye.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -95,7 +95,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Chowzy069/Reconvla" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -132,9 +132,6 @@
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
     </div>
   </div>
 </section>
@@ -148,7 +145,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Recent advances in Vision-Language-Action (VLA) models have enabled robotic agents to integrate multimodal understanding with action execution.
+            However, our empirical analysis reveals that current VLAs struggle to allocate visual attention to target regions.
+            Instead, visual attention is always dispersed.
+            To guide the visual attention grounding on the correct target, we propose \textbf{\method}, a reconstructive VLA model with an implicit grounding paradigm. 
+            Conditioned on the model's visual outputs, a diffusion transformer aims to reconstruct the gaze region of the image, which corresponds to the target manipulated objects.
+            This process prompts the VLA model to learn fine-grained representations and accurately allocate visual attention, thus effectively leveraging task-specific visual information and conducting precise manipulation.
+            Moreover, we curate a large-scale pretraining dataset comprising over 100k trajectories and 2 million data samples from open-source robotic datasets, further boosting the model’s generalization in visual reconstruction.
+            Extensive experiments in simulation and the real world demonstrate the superiority of our implicit grounding method, showcasing its capabilities of precise manipulation and generalization.nsectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
           </p>
         </div>
       </div>
@@ -158,149 +162,153 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+
+<!-- Paper introduction -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduce</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+            <img src="static/images/teaser_new.jpg" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+          </figure>
+          <ol>
+            <li> We propose ReconVLA, a reconstructive VLA model with an implicit grounding paradigm. The reconstruction of gaze regions prompts the model toward precise visual attention allocation and fine-grained representation learning, thereby enhancing visual grounding capabilities and executing precise manipulation.</li>
+            <li> We constructed a large-scale robot pretraining dataset, containing more than 100k trajectories, 2 million data samples. Pretraining on this dataset enhances the model's generalization of visual reconstruction capabilities.</li>
+            <li> Extensive experiments in simulation and the real world show the superiority of our implicit grounding methods and the capabilities of precise manipulation and generalization for unseen targets.</li>
+          </ol>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End paper introduction -->
 
+<!-- Paper method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+            <img src="static/images/arch.jpg" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+          </figure>
+          <ol>
+            Our model consists of a reconstructive part and an action part.
+            The input includes multi-view images and a text instruction.
+            For the action part, the model outputs discrete action tokens.
+            For the reconstruction part, ReconVLA is guided to output reconstructive tokens, which are conditions of the denoising process to reconstruct the scene tokens z<sub>0</sub> from noisy z<sub>t</sub>.
+            The scene tokens are tokenized images of gaze regions.
+            This supervision enables ReconVLA to enhance visual grounding and fine-grained comprehension capabilities, which contribute to precise manipulation.
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper method -->
 
+<!-- Paper pretraining -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Visual Pretraining</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+            <img src="static/images/pretrain.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+          </figure>
+          <ol>
+            To enhance its ability to ground and reconstruct specific regions, we design a pretraining process for reconstruction tasks on a large-scale robot dataset.
+            We constructed the pre-training dataset based on large-scale open-source robotic datasets <a href="https://rail.eecs.berkeley.edu/datasets/bridge_release/data/" target="_blank" rel="noopener noreferrer">BridgeData V2</a>, along with high-quality simulation datasets <a href="https://libero-project.github.io/datasets" target="_blank" rel="noopener noreferrer">LIBERO</a> and <a href="https://github.com/mees/calvin" target="_blank" rel="noopener noreferrer">CALVIN</a>.
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper pretraining -->
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Paper Experiments -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <figure class="image is-16by4" >
+            <img src="static/images/main_epx.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+          </figure>
+          <ol class="has-text-centered" style="font-size: 1.2rem;">
+            Main experiment in simulation.
+          </ol>
+          <h3 class="title is-4">Evaluation on CALVIN ABC->D Benchmark</h3>
+          <h3 class="title is-4">Comparison with other methods</h3>
+          <div class="columns is-variable is-4 is-mobile">
+            <div class="column is-6-mobile is-6-tablet is-6-desktop">
+              <figure class="image">
+                <img src="static/images/comparison.jpg" alt="ReconVLA architecture" style="width:100%; height:auto;">
+              </figure>
+              <p class="has-text-centered">Comparison with Other Methods</p>
+            </div>
+            <div class="column is-6-mobile is-6-tablet is-6-desktop">
+              <figure class="image">
+                <img src="static/images/compare_table.png" alt="ReconVLA architecture" style="width:100%; height:auto;">
+              </figure>
+            </div>
+          </div>
+          <h3 class="title is-4">Ablation Study</h3>
+          <div class="content has-text-justified">
+            <figure class="image is-16by4" >
+              <img src="static/images/Ablation.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+            </figure>
+            <ol class="has-text-centered" style="font-size: 1.2rem;">
+              We observe that pretraining leads to a significant improvement in success rates.
+This is because, in unseen test environments, grounding the target object and performing reconstruction is inherently challenging and poses a generalization challenge to the model’s generative capability.
+Pretraining on large-scale datasets substantially enhances the model’s generalization ability during visual reconstruction.
+            </ol>
+          </div>
+          <h3 class="title is-4">Evaluation on Real World</h3>
+          <div class="content has-text-justified">
+            <figure class="image is-16by4" >
+              <img src="static/images/real_world_tasks.jpg" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+            </figure>
+            <ol class="has-text-centered" style="font-size: 1.2rem;">
+              We evaluate the model’s generalization ability on real-world tasks.
+            </ol>
+            <figure class="image is-16by4" >
+              <img src="static/images/real_world_basic.png" alt="ReconVLA architecture"  style="width:100% ; height:100% ;">
+            </figure>
+            <ol class="has-text-centered" style="font-size: 1.2rem;">
+              The real world results compare with other methods.
+            </ol>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
+<!-- End paper experiments -->
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>
+        @article{,
+          title={ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver},
+          author={Wenxuan Song, Ziyang Zhou, Han Zhao, Jiayi Chen, Pengxiang Ding, Haodong Yan, Yuxin Huang, Feilong Tang, Donglin Wang, Haoang Li},
+          journal={},
+          year={2025}
+        }
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
 
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 <!-- Statcounter tracking code -->
   

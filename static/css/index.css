@@ -134,4 +134,14 @@ body {
 }
 
 
+/* Global link colors within content sections */
+.content a {
+  color: #2563eb;
+}
+.content a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+
 
